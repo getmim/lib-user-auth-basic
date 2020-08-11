@@ -31,10 +31,13 @@ class Basic implements \LibUser\Iface\Authorizer
         $user = $handler::getByCredentials($uname, $upass);
         if(!$user)
             return null;
+        self::$session->user_id = $user->id;
         return $user->id;
     }
 
     static function loginById(string $identity): ?array{
+        if(module_exists('lib-event'))
+            Event::trigger('user:authorized', $identity);
         return null;
     }
 

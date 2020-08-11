@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'lib-user-auth-basic',
-    '__version' => '0.0.1',
+    '__version' => '0.1.0',
     '__git' => 'git@github.com:getmim/lib-user-auth-basic.git',
     '__license' => 'MIT',
     '__author' => [
