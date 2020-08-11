@@ -7,6 +7,8 @@
 
 namespace LibUserAuthBasic\Authorizer;
 
+use LibEvent\Library\Event;
+
 class Basic implements \LibUser\Iface\Authorizer
 {
     private static $session;
